@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ydrc-library
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: OWNER_EMAIL
+        sync: false
+      - key: FIRESTORE_KEYS
+        sync: false
