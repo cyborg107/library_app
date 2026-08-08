@@ -1,0 +1,7 @@
+flask
+gunicorn
+pandas
+google-cloud-firestore
+google-auth
+requests
+rapidfuzz
